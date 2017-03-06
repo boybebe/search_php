@@ -11,12 +11,13 @@ CREATE TABLE IF NOT EXISTS `items` (
   `created_by` int(11) NOT NULL,
   `modified_by` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
-  `item_type_id` int(11) NOT NULL
+  `item_type_id` int(11) NOT NULL,
+  `key_word` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 
-INSERT INTO `items` (`id`, `codename`, `itemname`, `detail`, `unit`, `price`, `img`, `created`, `modified`, `created_by`, `modified_by`, `status`, `item_type_id`) VALUES
+INSERT INTO `items` (`id`, `codename`, `itemname`, `detail`, `unit`, `price`, `img`, `created`, `modified`, `created_by`, `modified_by`, `status`, `item_type_id` ,`key_word`) VALUES
 (2, 'CM00002', 'iPhone 6 Plus', '', 'เครื่อง', '25000.00', 'ecimage.jpg', '2015-03-30 18:38:43', '2015-03-30 18:38:43', 1, 1, 1, 6),
 (3, 'CM00003', 'Macbook Pro mini', '', 'เครื่อง', '45000.00', 'ecimage.jpg', '2015-03-30 18:39:53', '2015-03-30 18:39:53', 1, 1, 1, 1),
 (4, 'CM00004', 'Macbook Pro 4', '', 'เครื่อง', '60400.00', 'ecimage.jpg', '2015-03-30 18:40:33', '2015-03-30 18:40:33', 1, 1, 1, 1),
