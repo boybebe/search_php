@@ -12,7 +12,7 @@ $query = mysql_query($sql);
                 <th>ชื่อสินค้า</th>
                 <th>ราคาสินค้า</th>
                 <th>หน่วยนับ</th>
-				<th>คำค้น</th>
+		<th>คำค้น</th>
             </tr>
         </thead>
         <tbody>
