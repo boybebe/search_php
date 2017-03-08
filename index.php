@@ -30,7 +30,7 @@ include 'connect.php';
                     <form class="form-inline" name="searchform" id="searchform">
                         <div class="form-group">
                             <label for="textsearch" >ชื่อสินค้า</label>
-                            <input type="text" name="itemname" id="itemname" class="form-control" placeholder="ข้อความ คำค้นหา!" autocomplete="off">
+                            <input type="text" name="key_word" id="key_word" class="form-control" placeholder="ข้อความ คำค้นหา!" autocomplete="off">
                         </div>
                         <button type="button" class="btn btn-primary" id="btnSearch">
                             <span class="glyphicon glyphicon-search"></span>
@@ -51,7 +51,7 @@ include 'connect.php';
                     $.ajax({
                         url: "search.php",
                         type: "post",
-                        data: {itemname: $("#itemname").val()},
+                        data: {key_word: $("#key_word").val()},
                         beforeSend: function () {
                             $(".loading").show();
                         },
