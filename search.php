@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-$sql = "select * from items where itemname like '%{$_POST['itemname']}%'";
+$sql = "select * from items where key_word like '%{$_POST['key_word']}%'";
 $query = mysql_query($sql);
 ?>
 <div class="col-md-12">
@@ -12,6 +12,7 @@ $query = mysql_query($sql);
                 <th>ชื่อสินค้า</th>
                 <th>ราคาสินค้า</th>
                 <th>หน่วยนับ</th>
+		<th>คำค้น</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@ $query = mysql_query($sql);
                 <td><?php echo $result['itemname'];?></td>
                 <td><?php echo number_format($result['price']);?></td>
                 <td><?php echo $result['unit'];?></td>
+		<td><?php echo $result['key_word'];?></td>
             </tr>
             <?php $i++; } ?>
         </tbody>
