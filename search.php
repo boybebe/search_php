@@ -23,7 +23,7 @@ $query = mysql_query($sql);
                 <td><?php echo $result['itemname'];?></td>
                 <td><?php echo number_format($result['price']);?></td>
                 <td><?php echo $result['unit'];?></td>
-				<td><?php echo $result['key_word'];?></td>
+		<td><?php echo $result['key_word'];?></td>
             </tr>
             <?php $i++; } ?>
         </tbody>
